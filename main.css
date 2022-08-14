@@ -16,8 +16,7 @@
 	--main-color: 255, 255, 255;
 	--second-color: #c7c7c7;
 	--font-color: 40, 40, 40;
-	--def-height: calc(4645vw / 96);
-	font-size: calc(4645vw / 96 / 929);
+	font-size: calc(min(100vh, calc(92900vw / 940.8)) / 929);
 }
 * {
 	margin: 0;
@@ -34,22 +33,28 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 }
-.con {
+/*#con {
 	width: 100vw;
 	height: 929rem;
 	font-size: 28rem;
 	position: absolute;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}*/
 .subcon {
 	position: absolute;
-	right: 25.5%;
-	width: 49vw;
+	font-size: 28rem;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: min(100vw, calc(94080vh / 929));
 	background-color: rgb(var(--main-color));
-	height: 929rem;
+	height: min(100vh, calc(92900vw / 940.8));
 	z-index: 7;
 	-webkit-transition: -webkit-filter ease-in-out 0.5s;
 	transition: -webkit-filter ease-in-out 0.5s;
@@ -154,10 +159,11 @@ button {
 	cursor: pointer;
 }
 input[type='number'] {
-	width: calc(125vw / 16);
+	width: calc(125 / 784 * min(100vw, calc(94080vh / 929)));
 	background-color: var(--second-color);
 	font-weight: bold;
 	padding: 5rem 0;
+	margin: 0 -5rem;
 }
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
@@ -172,6 +178,7 @@ button,
 input[type='number'] {
 	text-align: center;
 	border: none;
+	outline: none;
 	font-size: 40rem;
 }
 .increment {
@@ -183,9 +190,9 @@ input[type='number'] {
 	border-radius: 50% 0 0 50%;
 }
 button div {
-	-webkit-transition: transform ease-out 0.3s;
-	-o-transition: transform ease-out 0.3s;
-	transition: transform ease-out 0.3s;
+	-webkit-transition: transform ease-out 0.3s, text-shadow ease-out 0.3s;
+	-o-transition: transform ease-out 0.3s, text-shadow ease-out 0.3s;
+	transition: transform ease-out 0.3s, text-shadow ease-out 0.3s;
 }
 button:hover div {
 	-webkit-transform: scale(1.4);
