@@ -140,11 +140,6 @@ function compute1() {
 				points_gained += tricks * overticks[double + 1][age];
 			}
 		}
-		if (party1) {
-			points_minimum = min_table[1][points - 20];
-		} else {
-			points_minimum = min_table[0][points - 20];
-		}
 	} else {
 		if (tricks < 0) {
 			if (party2) {
@@ -164,11 +159,11 @@ function compute1() {
 				points_gained += tricks * overticks[double + 1][age];
 			}
 		}
-		if (party2) {
-			points_minimum = min_table[1][points - 20];
-		} else {
-			points_minimum = min_table[0][points - 20];
-		}
+	}
+	if (party1) {
+		points_minimum = min_table[1][points - 20];
+	} else {
+		points_minimum = min_table[0][points - 20];
 	}
 	console.log(points_gained);
 	console.log(points_minimum);
