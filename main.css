@@ -12,6 +12,10 @@ body {
 	color: black;
 	text-align: center;
 	font-family: 'Ubuntu', sans-serif;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 }
 .subcon {
@@ -23,10 +27,13 @@ body {
 	min-height: 100vh;
 	z-index: 7;
 	transition: filter ease-in-out 0.5s;
+	-webkit-box-shadow: 0 0 5px 3px #ffffff, 0 0 5px 10px #ffffff80, 0 0 15px 20px #ffffff60;
+	-moz-box-shadow: 0 0 5px 3px #ffffff, 0 0 5px 10px #ffffff80, 0 0 15px 20px #ffffff60;
 	box-shadow: 0 0 5px 3px #ffffff, 0 0 5px 10px #ffffff80, 0 0 15px 20px #ffffff60;
 }
 .subconprim {
 	filter: blur(4px) brightness(60%);
+	-webkit-filter: blur(4px) brightness(60%);
 	pointer-events: none;
 }
 .subcon .row {
@@ -40,6 +47,9 @@ body {
 	height: 70px;
 	justify-content: center;
 	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 }
 .inp1,
@@ -65,6 +75,8 @@ input[type='radio'] {
 	color: rgb(var(--font-color));
 	height: 65px;
 	margin: 16px 0 0 0;
+	-webkit-box-shadow: 0px 0px 3px 1px #00000050;
+	-moz-box-shadow: 0px 0px 3px 1px #00000050;
 	box-shadow: 0px 0px 3px 1px #00000050;
 }
 .inp1 .button1 {
@@ -77,17 +89,19 @@ input[type='radio'] {
 }
 input[type='checkbox']:checked + .button1,
 input[type='radio']:checked + .button1 {
-	/* background-color: #48c229;
-	outline: #48c229 solid 2px;
-	box-shadow: 0px 0px 3px 3px #48c22940, 0px 0px 6px 6px #48c22940, 0px 0px 9px 9px #48c22940; */
 	background-color: rgb(var(--font-color));
 	color: rgb(var(--main-color));
+	-webkit-box-shadow: 0px 0px 2px 3px rgb(var(--font-color), 0.1), 0px 0px 4px 6px rgb(var(--font-color), 0.1), 0px 0px 6px 9px rgb(var(--font-color), 0.1);
+	-moz-box-shadow: 0px 0px 2px 3px rgb(var(--font-color), 0.1), 0px 0px 4px 6px rgb(var(--font-color), 0.1), 0px 0px 6px 9px rgb(var(--font-color), 0.1);
 	box-shadow: 0px 0px 2px 3px rgb(var(--font-color), 0.1), 0px 0px 4px 6px rgb(var(--font-color), 0.1), 0px 0px 6px 9px rgb(var(--font-color), 0.1);
 }
 label {
 	height: 100%;
 	justify-content: center;
 	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	cursor: pointer;
 }
@@ -184,9 +198,13 @@ input[type='button']:hover {
 	border-width: 0px;
 	background-color: rgb(var(--font-color));
 	color: rgb(var(--main-color));
+	-webkit-box-shadow: 0px 0px 2px 3px rgb(var(--font-color), 0.1), 0px 0px 4px 6px rgb(var(--font-color), 0.1), 0px 0px 6px 9px rgb(var(--font-color), 0.1);
+	-moz-box-shadow: 0px 0px 2px 3px rgb(var(--font-color), 0.1), 0px 0px 4px 6px rgb(var(--font-color), 0.1), 0px 0px 6px 9px rgb(var(--font-color), 0.1);
 	box-shadow: 0px 0px 2px 3px rgb(var(--font-color), 0.1), 0px 0px 4px 6px rgb(var(--font-color), 0.1), 0px 0px 6px 9px rgb(var(--font-color), 0.1);
 }
 input[type='button']:active {
+	-webkit-box-shadow: 0 0 7px 6px #48c22940;
+	-moz-box-shadow: 0 0 7px 6px #48c22940;
 	box-shadow: 0 0 7px 6px #48c22940;
 }
 .window {
@@ -198,7 +216,7 @@ input[type='button']:active {
 	width: 25%;
 	height: 35%;
 	z-index: 8;
-	transform: translate(-50%, -200vh);
+	transform: translate(-50%, -100vh);
 	border-radius: 10px;
 	border: #505050 2px solid;
 	overflow: hidden;
@@ -218,6 +236,9 @@ input[type='button']:active {
 	left: -10px;
 	box-sizing: border-box;
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -250,10 +271,15 @@ input[type='button']:active {
 	border-radius: 10px;
 	border: solid 2px rgb(var(--font-color));
 	background-color: #a5a5a5;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition: all ease-in-out 0.2s;
+	-webkit-box-shadow: 0 0 5px 3px #ffffff10, 0 0 5px 10px #ffffff10, 0 0 15px 20px #ffffff10;
+	-moz-box-shadow: 0 0 5px 3px #ffffff10, 0 0 5px 10px #ffffff10, 0 0 15px 20px #ffffff10;
 	box-shadow: 0 0 5px 3px #ffffff10, 0 0 5px 10px #ffffff10, 0 0 15px 20px #ffffff10;
 }
 .refresh:hover {
@@ -269,15 +295,19 @@ input[type='button']:active {
 }
 .animationClass1 {
 	animation: heightAnimation ease-in-out 0.6s forwards 1;
+	-webkit-animation: heightAnimation ease-in-out 0.6s forwards 1;
 }
 .animationClass2 {
 	animation: heightAnimation2 ease-in-out 0.6s forwards 1;
+	-webkit-animation: heightAnimation2 ease-in-out 0.6s forwards 1;
 }
 .animationClass3 {
 	animation: scaleAnimation ease-in-out 0.3s forwards 1;
+	-webkit-animation: scaleAnimation ease-in-out 0.3s forwards 1;
 }
 .animationClass4 {
 	animation: scaleAnimation2 ease-in-out 0.3s forwards 1;
+	-webkit-animation: scaleAnimation2 ease-in-out 0.3s forwards 1;
 }
 
 @keyframes heightAnimation {
