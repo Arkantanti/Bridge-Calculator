@@ -33,25 +33,18 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 }
-/*#con {
-	width: 100vw;
-	height: 929rem;
-	font-size: 28rem;
+.con {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	font-size: 28rem;
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-}*/
+	width: min(100vw, calc(94080vh / 929));
+	height: min(100vh, calc(92900vw / 940.8));
+}
 .subcon {
-	position: absolute;
-	font-size: 28rem;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
 	width: min(100vw, calc(94080vh / 929));
 	background-color: rgb(var(--main-color));
 	height: min(100vh, calc(92900vw / 940.8));
@@ -270,8 +263,8 @@ input[type='button']:active {
 	top: 21%;
 	color: rgb(var(--font-color));
 	background-color: var(--second-color);
-	width: 25%;
-	height: 35%;
+	width: calc(0.25 * 1920rem);
+	height: calc(0.35 * 929rem);
 	z-index: 8;
 	-webkit-transform: translate(-50%, -100vh);
 	-ms-transform: translate(-50%, -100vh);
@@ -280,9 +273,9 @@ input[type='button']:active {
 	border: #505050 2rem solid;
 	overflow: hidden;
 	font-weight: bold;
-	-webkit-transition: all ease-in-out 0.7s;
-	-o-transition: all ease-in-out 0.7s;
-	transition: all ease-in-out 0.7s;
+	-webkit-transition: transform ease-in-out 0.7s;
+	-o-transition: transform ease-in-out 0.7s;
+	transition: transform ease-in-out 0.7s;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0 10rem;
@@ -293,7 +286,7 @@ input[type='button']:active {
 	transform: translate(-50%);
 }
 .line {
-	width: 25vw;
+	width: calc(0.25 * 1920rem);
 	background-color: #a5a5a5;
 	border-bottom: 1rem solid #838383;
 	height: 10%;
@@ -322,9 +315,9 @@ input[type='button']:active {
 	position: absolute;
 	right: 10rem;
 	top: 50%;
-	-webkit-transition: all ease-in 0.1s;
-	-o-transition: all ease-in 0.1s;
-	transition: all ease-in 0.1s;
+	-webkit-transition: color ease-in 0.1s, transform ease-in 0.1s;
+	-o-transition: color ease-in 0.1s, transform ease-in 0.1s;
+	transition: color ease-in 0.1s, transform ease-in 0.1s;
 }
 .off:hover {
 	color: rgb(90, 90, 90);
@@ -354,9 +347,9 @@ input[type='button']:active {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-transition: all ease-in-out 0.2s;
-	-o-transition: all ease-in-out 0.2s;
-	transition: all ease-in-out 0.2s;
+	-webkit-transition: transform ease-in-out 0.2s, background-color ease-in-out 0.2s;
+	-o-transition: transform ease-in-out 0.2s, background-color ease-in-out 0.2s;
+	transition: transform ease-in-out 0.2s, background-color ease-in-out 0.2s;
 	-webkit-box-shadow: 0 0 5rem 3rem #ffffff10, 0 0 5rem 10rem #ffffff10, 0 0 15rem 20rem #ffffff10;
 	box-shadow: 0 0 5rem 3rem #ffffff10, 0 0 5rem 10rem #ffffff10, 0 0 15rem 20rem #ffffff10;
 }
