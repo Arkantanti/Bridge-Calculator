@@ -204,7 +204,7 @@ function windowClose() {
 }
 function alertWindow(alert) {
 	windowPopUp();
-	document.getElementById('textpart').innerHTML = '<h1>' + alert + ' Spróbój ponownie!</h1><div class="refresh" onclick="window.location.reload()">RESTART</div>';
+	document.getElementById('textpart').innerHTML = '<h1>' + alert + ' Spróbuj ponownie!</h1><div class="refresh" onclick="window.location.reload()">RESTART</div>';
 }
 function checkboxBlock() {
 	var radioValue2 = document.querySelector('input[name="ktogral"]:checked').value;
