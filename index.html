@@ -10,94 +10,96 @@
 </head>
 
 <body>
-	<div class="window" id="mainwindow">
-		<div class="line">Okienko Informacyjne
-			<div class="off" onclick="windowClose()">+</div>
-		</div>
-		<div id="textpart"></div>
-	</div>
-	<div class="subcon" id="maincon">
-		<div class="inp1 row">
-			<div class="text">Para, która grała:</div>
-			<input type="radio" name="ktogral" id="ktogral1" value="more" onclick="checkboxBlock()" checked />
-			<div class="button1"><label for="ktogral1">Para z większością punktów</label></div>
-			<input type="radio" name="ktogral" id="ktogral2" value="less" onclick="checkboxBlock()" />
-			<div class="button1"><label for="ktogral2">Para z mniejszością punktów</label></div>
-		</div>
-		<div class="inp2 row">
-			<div class="text">Kontrakt z:</div>
-			<input type="radio" name="kontra" id="kontra1" value="bez" checked />
-			<div class="button1"><label for="kontra1">Kontrakt bez kontry</label></div>
-			<input type="radio" name="kontra" id="kontra2" value="kontra" />
-			<div class="button1"><label for="kontra2">Kontrakt z kontrą</label></div>
-			<input type="radio" name="kontra" id="kontra3" value="rekontra" />
-			<div class="button1"><label for="kontra3">Kontrakt z rekontrą</label></div>
-		</div>
-		<div style="clear: both;"></div>
-		<div class="row inp3">
-			<div class="text">Punkty pary, która ma ich większość:</div>
-			<div>
-				<button class="decrement" onclick="decrement1()">
-					<div>−</div>
-				</button><input type="number" value="20" step="1" id="licznik1" min="20" max="40" /><button class="increment" onclick="increment1()">
-					<div>+</div>
-				</button>
+	<div class="con">
+		<div class="window" id="mainwindow">
+			<div class="line">Okienko Informacyjne
+				<div class="off" onclick="windowClose()">+</div>
 			</div>
+			<div id="textpart"></div>
 		</div>
-		<div class=" row inp4">
-			<div class="text">Wpadki i nadróbki od -7 do +6:</div>
-			<div>
-				<button class="decrement" onclick="decrement2()">
-					<div>−</div>
-				</button><input type="number" value="0" step="1" id="licznik2" min="-7" max="6" /><button class="increment" onclick="increment2()">
-					<div>+</div>
-				</button>
+		<div class="subcon" id="maincon">
+			<div class="inp1 row">
+				<div class="text">Para, która grała:</div>
+				<input type="radio" name="ktogral" id="ktogral1" value="more" onclick="checkboxBlock()" checked />
+				<div class="button1"><label for="ktogral1">Para z większością punktów</label></div>
+				<input type="radio" name="ktogral" id="ktogral2" value="less" onclick="checkboxBlock()" />
+				<div class="button1"><label for="ktogral2">Para z mniejszością punktów</label></div>
 			</div>
-		</div>
-		<div style="clear: both;"></div>
-		<div class="row inp5">
-			<div class="text">Pary po partii:</div>
-			<input type="checkbox" name="partia" id="partia1" />
-			<div class="button1" id="radioButton1"><label for="partia1">Para z<br />większością punktów</label></div>
-			<input type="checkbox" name="partia" id="partia2" />
-			<div class="button1" id="radioButton2"><label for="partia2">Para z mniejszością punktów</label></div>
-		</div>
-		<div class="row inp6">
-			<div class="text">Kolor kontraktu:</div>
-			<input type="radio" name="kolorkontrakt" id="kk1" value="C" />
-			<div class="button1"><label for="kk1">Trefl</label></div>
-			<input type="radio" name="kolorkontrakt" id="kk2" value="D" />
-			<div class="button1"><label for="kk2">Karo</label></div>
-			<input type="radio" name="kolorkontrakt" id="kk3" value="H" />
-			<div class="button1"><label for="kk3">Kier</label></div>
-			<input type="radio" name="kolorkontrakt" id="kk4" value="S" />
-			<div class="button1"><label for="kk4">Pik</label></div>
-			<input type="radio" name="kolorkontrakt" id="kk5" value="NT" />
-			<div class="button1"><label for="kk5">Bez atu</label></div>
-		</div>
-		<div class="row inp7">
-			<div class="text">Poziom kontraktu:</div>
-			<input type="radio" name="poziomkontrakt" id="pk1" value="1" />
-			<div class="button1"><label for="pk1">1</label></div>
-			<input type="radio" name="poziomkontrakt" id="pk2" value="2" />
-			<div class="button1" style="margin-left:5%;"><label for="pk2">2</label></div>
+			<div class="inp2 row">
+				<div class="text">Kontrakt z:</div>
+				<input type="radio" name="kontra" id="kontra1" value="bez" checked />
+				<div class="button1"><label for="kontra1">Kontrakt bez kontry</label></div>
+				<input type="radio" name="kontra" id="kontra2" value="kontra" />
+				<div class="button1"><label for="kontra2">Kontrakt z kontrą</label></div>
+				<input type="radio" name="kontra" id="kontra3" value="rekontra" />
+				<div class="button1"><label for="kontra3">Kontrakt z rekontrą</label></div>
+			</div>
 			<div style="clear: both;"></div>
-			<input type="radio" name="poziomkontrakt" id="pk3" value="3" />
-			<div class="button1"><label for="pk3">3</label></div>
-			<input type="radio" name="poziomkontrakt" id="pk4" value="4" />
-			<div class="button1" style="margin-left:5%;"><label for="pk4">4</label></div>
+			<div class="row inp3">
+				<div class="text">Punkty pary, która ma ich większość:</div>
+				<div>
+					<button class="decrement" onclick="decrement1()">
+						<div>−</div>
+					</button><input type="number" value="20" step="1" id="licznik1" min="20" max="40" /><button class="increment" onclick="increment1()">
+						<div>+</div>
+					</button>
+				</div>
+			</div>
+			<div class=" row inp4">
+				<div class="text">Wpadki i nadróbki od -7 do +6:</div>
+				<div>
+					<button class="decrement" onclick="decrement2()">
+						<div>−</div>
+					</button><input type="number" value="0" step="1" id="licznik2" min="-7" max="6" /><button class="increment" onclick="increment2()">
+						<div>+</div>
+					</button>
+				</div>
+			</div>
 			<div style="clear: both;"></div>
-			<input type="radio" name="poziomkontrakt" id="pk5" value="5" />
-			<div class="button1"><label for="pk5">5</label></div>
-			<input type="radio" name="poziomkontrakt" id="pk6" value="6" />
-			<div class="button1" style="margin-left:5%;"><label for="pk6">6</label></div>
+			<div class="row inp5">
+				<div class="text">Pary po partii:</div>
+				<input type="checkbox" name="partia" id="partia1" />
+				<div class="button1" id="radioButton1"><label for="partia1">Para z<br />większością punktów</label></div>
+				<input type="checkbox" name="partia" id="partia2" />
+				<div class="button1" id="radioButton2"><label for="partia2">Para z mniejszością punktów</label></div>
+			</div>
+			<div class="row inp6">
+				<div class="text">Kolor kontraktu:</div>
+				<input type="radio" name="kolorkontrakt" id="kk1" value="C" />
+				<div class="button1"><label for="kk1">Trefl</label></div>
+				<input type="radio" name="kolorkontrakt" id="kk2" value="D" />
+				<div class="button1"><label for="kk2">Karo</label></div>
+				<input type="radio" name="kolorkontrakt" id="kk3" value="H" />
+				<div class="button1"><label for="kk3">Kier</label></div>
+				<input type="radio" name="kolorkontrakt" id="kk4" value="S" />
+				<div class="button1"><label for="kk4">Pik</label></div>
+				<input type="radio" name="kolorkontrakt" id="kk5" value="NT" />
+				<div class="button1"><label for="kk5">Bez atu</label></div>
+			</div>
+			<div class="row inp7">
+				<div class="text">Poziom kontraktu:</div>
+				<input type="radio" name="poziomkontrakt" id="pk1" value="1" />
+				<div class="button1"><label for="pk1">1</label></div>
+				<input type="radio" name="poziomkontrakt" id="pk2" value="2" />
+				<div class="button1" style="margin-left:5%;"><label for="pk2">2</label></div>
+				<div style="clear: both;"></div>
+				<input type="radio" name="poziomkontrakt" id="pk3" value="3" />
+				<div class="button1"><label for="pk3">3</label></div>
+				<input type="radio" name="poziomkontrakt" id="pk4" value="4" />
+				<div class="button1" style="margin-left:5%;"><label for="pk4">4</label></div>
+				<div style="clear: both;"></div>
+				<input type="radio" name="poziomkontrakt" id="pk5" value="5" />
+				<div class="button1"><label for="pk5">5</label></div>
+				<input type="radio" name="poziomkontrakt" id="pk6" value="6" />
+				<div class="button1" style="margin-left:5%;"><label for="pk6">6</label></div>
+				<div style="clear: both;"></div>
+				<input type="radio" name="poziomkontrakt" id="pk7" value="7" />
+				<div class="button1"><label for="pk7">7</label></div>
+			</div>
 			<div style="clear: both;"></div>
-			<input type="radio" name="poziomkontrakt" id="pk7" value="7" />
-			<div class="button1"><label for="pk7">7</label></div>
-		</div>
-		<div style="clear: both;"></div>
-		<div class="row button">
-			<input type="button" value="Oblicz liczbę IMPów" onclick="getValues()" />
+			<div class="row button">
+				<input type="button" value="Oblicz liczbę IMPów" onclick="getValues()" />
+			</div>
 		</div>
 	</div>
 	<script src="main.js"></script>
