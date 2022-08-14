@@ -37,6 +37,7 @@ body {
 .con {
 	width: 100vw;
 	height: 929rem;
+	font-size: 28rem;
 	position: absolute;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -47,7 +48,6 @@ body {
 	position: absolute;
 	right: 25.5%;
 	width: 49vw;
-	font-size: 28rem;
 	background-color: rgb(var(--main-color));
 	height: 929rem;
 	z-index: 7;
