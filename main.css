@@ -198,7 +198,7 @@ input[type='button']:active {
 	width: 25%;
 	height: 35%;
 	z-index: 8;
-	transform: translate(-50%, -100vh);
+	transform: translate(-50%, -200vh);
 	border-radius: 10px;
 	border: #505050 2px solid;
 	overflow: hidden;
