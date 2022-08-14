@@ -258,6 +258,7 @@ input[type='button']:active {
 }
 .window {
 	position: absolute;
+	font-size: 16rem;
 	left: 50%;
 	top: 21%;
 	color: rgb(var(--font-color));
