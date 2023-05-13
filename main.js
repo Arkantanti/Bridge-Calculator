@@ -57,7 +57,7 @@ var overticks = {
 };
 var main_points = {
 	bez1: [70, 80, 90, 90, 110, 120, 110, 140, 400, 130, 420, 430, 400, 450, 460, 920, 980, 990, 1440, 1510, 1520],
-	kontra1: [140, 160, 180, 180, 470, 490, 470, 530, 550, 510, 590, 610, 550, 670, 1090, 1210, 1230, 1630, 1770, 1790],
+	kontra1: [140, 160, 180, 180, 470, 490, 470, 530, 550, 510, 590, 610, 550, 650, 670, 1090, 1210, 1230, 1630, 1770, 1790],
 	rekontra1: [230, 520, 560, 560, 540, 680, 640, 760, 800, 720, 880, 920, 800, 1000, 1040, 1380, 1620, 1660, 1960, 2240, 2280],
 	bez2: [70, 80, 90, 90, 110, 120, 110, 140, 600, 130, 620, 630, 600, 650, 660, 1370, 1430, 1440, 2140, 2210, 2200],
 	kontra2: [140, 160, 180, 180, 670, 690, 670, 730, 750, 710, 790, 810, 750, 850, 870, 1510, 1660, 1680, 2330, 2470, 2490],
@@ -82,32 +82,18 @@ function getValues() {
 	}
 	var selector1 = document.querySelector('input[name="poziomkontrakt"]:checked');
 	var selector2 = document.querySelector('input[name="kolorkontrakt"]:checked');
-	var selector3 = document.querySelector('input[name="ktogral"]:checked');
-	var selector4 = document.querySelector('input[name="kontra"]:checked');
-	if (!(!selector1 || !selector2 || !selector3 || !selector4)) {
-		level = selector1.value;
+	moreplayed = document.querySelector('input[name="ktogral"]:checked').value;
+	double = document.querySelector('input[name="kontra"]:checked').value;
+	if (!(!selector1 || !selector2)) {
+		level = Number(selector1.value);
 		color = selector2.value;
-		moreplayed = selector3.value;
-		double = selector4.value;
-		console.log(points);
-		console.log(tricks);
-		console.log(level);
-		console.log(color);
-		console.log(moreplayed);
-		console.log(double);
-		console.log(party1);
-		console.log(party2);
-		if (points > 40 || points < 20) {
-			alertWindow('Niepoprawna liczba punktów.');
-		} else if (tricks < -7 || tricks > 6) {
-			alertWindow('Niepoprawna liczba w polu "Wpadki i Nadróbki"');
-		} else if (tricks + level > 7) {
-			alertWindow('Niepoprawne wartości w polach: "Wpadki i Nadróbki" i "Poziom Kontraktu"');
+		if (tricks + level > 7) {
+			alertWindow('Niepoprawne wartości w polach: "Wpadki i Nadróbki" i "Poziom Kontraktu".');
 		} else {
 			compute1();
 		}
 	} else {
-		alertWindow('Nie wszystkie pola zostały określone.');
+		alertWindow('Nie wszystkie pola zostały uzupełnione.');
 	}
 }
 function compute1() {
@@ -165,8 +151,6 @@ function compute1() {
 	} else {
 		points_minimum = min_table[0][points - 20];
 	}
-	console.log(points_gained);
-	console.log(points_minimum);
 	impCount();
 }
 function impCount() {
@@ -184,7 +168,6 @@ function impCount() {
 	if (diff < 0) {
 		imp_points = -imp_points;
 	}
-	console.log(imp_points);
 	windowPopUp();
 	document.getElementById('textpart').innerHTML =
 		'<h1>Liczba IMPów zdobytych przez parę z większością punktów:</h1><br /><h1>' + imp_points + '</h1>' + '<div class="refresh" onclick="window.location.reload()">RESTART</div>';
